@@ -25,5 +25,5 @@ appjail makejail \
 
 | Tag       | Arch    | Version            | Type   | `pkgbase_full` | `pkgbase_from`                               |
 | --------- | --------| ------------------ | ------ | -------------- | -------------------------------------------- |
-| `minimal` | `amd64` | `14-PKGBASE` | `thin` |      `0`       | `quay.io/dougrabson/freebsd14-minimal` |
-| `full`    | `amd64` | `14-PKGBASE` | `thin` |      `1`       | `quay.io/dougrabson/freebsd14-full`    |
+| `minimal` | `amd64` | `%%TAG1%%-PKGBASE` | `thin` |      `0`       | `quay.io/dougrabson/freebsd%%TAG1%%-minimal` |
+| `full`    | `amd64` | `%%TAG1%%-PKGBASE` | `thin` |      `1`       | `quay.io/dougrabson/freebsd%%TAG1%%-full`    |
