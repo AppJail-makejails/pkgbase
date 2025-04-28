@@ -1,5 +1,4 @@
-INCLUDE options/options.makejail
-
+OPTION overwrite=force
 OPTION empty
 
 ARG pkgbase_full=0
