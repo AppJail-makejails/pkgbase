@@ -10,6 +10,8 @@ RAW mountpath=`buildah mount "${container_id}"`
 VAR --make-arg-env "container_id=${container_id}"
 VAR --make-arg-env "mountpath=${mountpath}"
 
+CMD --local cp /etc/resolv.conf "${mountpath}/etc/resolv.conf"
+
 RAW if [ "${pkgbase_full}" != 0 ]; then
     CMD --local pkg -c "${mountpath}" install -y openssl
     CMD --local pkg -c "${mountpath}" install -y \
