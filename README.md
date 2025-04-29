@@ -19,7 +19,7 @@ appjail makejail \
 ### Arguments
 
 * `pkgbase_ajspec` (default: `gh+AppJail-makejails/pkgbase`): Entry point where the `appjail-ajspec(5)` file is located.
-* `pkgbase_tag` (default: `minimal`): see [#tags](#tags).
+* `pkgbase_tag` (default: `14-minimal`): see [#tags](#tags).
 
 ## Tags
 
