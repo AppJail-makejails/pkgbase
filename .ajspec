@@ -1,0 +1,17 @@
+tags+: 14-minimal
+14-minimal.arch: amd64
+14-minimal.name: "pkgbase"
+14-minimal.timestamp.amd64: 1745879375
+14-minimal.sum.amd64: 30b0ebe4d63bda1032cd9c2710acc62b5d6151dcfd4a0d5c281f0a32da0c5a02
+14-minimal.size.amd64: 21001699
+14-minimal.source.amd64: "https://images.all101bsd.download/pkgbase/14-minimal-amd64-image.appjail"
+14-minimal.source.amd64+: "http://appjail.hpc.at/pkgbase/14-minimal-amd64-image.appjail"
+tags+: 14-full
+14-full.arch: amd64
+14-full.name: "pkgbase"
+14-full.timestamp.amd64: 1745885135
+14-full.sum.amd64: a7aea6dbab1bac7a2f650dfe75d2f92ba05c3e7424804424ac1ef286b6d2df99
+14-full.size.amd64: 241416344
+14-full.source.amd64: "https://images.all101bsd.download/pkgbase/14-full-amd64-image.appjail"
+14-full.source.amd64+: "http://appjail.hpc.at/pkgbase/14-full-amd64-image.appjail"
+maintenance: "This image is uploading, please wait a moment and try again. If you are importing this image using a Makejail that has the '--<name>_ajspec' argument, you can use the 'reproduce' method to use 'appjail-reproduce'. See 'appjail-image(5)' for details."
