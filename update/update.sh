@@ -15,4 +15,7 @@ cat -- "${BASEDIR}/build.makejail.template" |\
     sed -Ee "s/%%TAG1%%/${TAG1}/g" > "${BASEDIR}/../build.makejail"
 
 cat -- "${BASEDIR}/README.md.template" |\
-    sed -Ee "s/%%TAG1%%/${TAG1}/g" > "${BASEDIR}/../README.md"
+    sed -E \
+        -e "s/%%TAG1%%/${TAG1}/g" \
+        -e "s/%%TAG2%%/${TAG2}/g" \
+        -e "s/%%TAG3%%/${TAG3}/g" > "${BASEDIR}/../README.md"

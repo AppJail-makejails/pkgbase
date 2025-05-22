@@ -23,7 +23,11 @@ appjail makejail \
 
 ## Tags
 
-| Tag                | Arch    | Version            | Type   | `pkgbase_full` | `pkgbase_from`                               |
-| ------------------ | --------| ------------------ | ------ | -------------- | -------------------------------------------- |
-| `%%TAG1%%-minimal` | `amd64` | `%%TAG1%%-PKGBASE` | `thin` |      `0`       | `quay.io/dougrabson/freebsd%%TAG1%%-minimal` |
-| `%%TAG1%%-full`    | `amd64` | `%%TAG1%%-PKGBASE` | `thin` |      `1`       | `quay.io/dougrabson/freebsd%%TAG1%%-full`    |
+| Tag                | Arch    | Version            | Type    | `pkgbase_full` | `pkgbase_from`                               |
+| ------------------ | --------| ------------------ | ------- | -------------- | -------------------------------------------- |
+| `%%TAG1%%-minimal` | `amd64` | `%%TAG1%%-RELEASE` | `thick` |      `0`       | `docker.io/freebsd/freebsd-runtime:%%TAG1%%` |
+| `%%TAG1%%-full`    | `amd64` | `%%TAG1%%-RELEASE` | `thick` |      `1`       | `docker.io/freebsd/freebsd-runtime:%%TAG1%%` |
+| `%%TAG2%%-minimal` | `amd64` | `%%TAG2%%-STABLE`  | `thick` |      `0`       | `docker.io/freebsd/freebsd-runtime:%%TAG2%%` |
+| `%%TAG2%%-full`    | `amd64` | `%%TAG2%%-STABLE`  | `thick` |      `1`       | `docker.io/freebsd/freebsd-runtime:%%TAG2%%` |
+| `%%TAG3%%-minimal` | `amd64` | `%%TAG3%%-CURRENT` | `thick` |      `0`       | `docker.io/freebsd/freebsd-runtime:%%TAG3%%` |
+| `%%TAG3%%-full`    | `amd64` | `%%TAG3%%-CURRENT` | `thick` |      `1`       | `docker.io/freebsd/freebsd-runtime:%%TAG3%%` |

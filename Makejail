@@ -1,6 +1,6 @@
 INCLUDE options/options.makejail
 
-ARG pkgbase_tag=14-minimal
+ARG pkgbase_tag=14.2-minimal
 ARG pkgbase_ajspec=gh+AppJail-makejails/pkgbase
 
 FROM --entrypoint "${pkgbase_ajspec}" pkgbase:${pkgbase_tag}

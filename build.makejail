@@ -2,7 +2,7 @@ OPTION overwrite=force
 OPTION empty
 
 ARG pkgbase_full=0
-ARG pkgbase_from=quay.io/dougrabson/freebsd14-minimal
+ARG pkgbase_from=docker.io/freebsd/freebsd-runtime:14.2
 
 RAW container_id=`buildah from "${pkgbase_from}"`
 RAW mountpath=`buildah mount "${container_id}"`
