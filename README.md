@@ -19,14 +19,14 @@ appjail makejail \
 ### Arguments
 
 * `pkgbase_ajspec` (default: `gh+AppJail-makejails/pkgbase`): Entry point where the `appjail-ajspec(5)` file is located.
-* `pkgbase_tag` (default: `14.2-minimal`): see [#tags](#tags).
+* `pkgbase_tag` (default: `14.3-minimal`): see [#tags](#tags).
 
 ## Tags
 
 | Tag                | Arch    | Version            | Type    | `pkgbase_full` | `pkgbase_from`                               |
 | ------------------ | --------| ------------------ | ------- | -------------- | -------------------------------------------- |
-| `14.2-minimal` | `amd64` | `14.2-RELEASE` | `thick` |      `0`       | `docker.io/freebsd/freebsd-runtime:14.2` |
-| `14.2-full`    | `amd64` | `14.2-RELEASE` | `thick` |      `1`       | `docker.io/freebsd/freebsd-runtime:14.2` |
+| `14.3-minimal` | `amd64` | `14.3-RELEASE` | `thick` |      `0`       | `docker.io/freebsd/freebsd-runtime:14.3` |
+| `14.3-full`    | `amd64` | `14.3-RELEASE` | `thick` |      `1`       | `docker.io/freebsd/freebsd-runtime:14.3` |
 | `14.snap-minimal` | `amd64` | `14.snap-STABLE`  | `thick` |      `0`       | `docker.io/freebsd/freebsd-runtime:14.snap` |
 | `14.snap-full`    | `amd64` | `14.snap-STABLE`  | `thick` |      `1`       | `docker.io/freebsd/freebsd-runtime:14.snap` |
 | `15.snap-minimal` | `amd64` | `15.snap-CURRENT` | `thick` |      `0`       | `docker.io/freebsd/freebsd-runtime:15.snap` |
