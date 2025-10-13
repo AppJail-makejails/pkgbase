@@ -1,47 +1,35 @@
-OPTION overwrite=force
-OPTION empty
-
 ARG pkgbase_full=0
 ARG pkgbase_from=docker.io/freebsd/freebsd-runtime:%%TAG1%%
 
-RAW container_id=`buildah from "${pkgbase_from}"`
-RAW mountpath=`buildah mount "${container_id}"`
-
-VAR --make-arg-env "container_id=${container_id}"
-VAR --make-arg-env "mountpath=${mountpath}"
-
-CMD --local cp /etc/resolv.conf "${mountpath}/etc/resolv.conf"
+OPTION start
+OPTION overwrite=force
+OPTION container=import args:--pull
+OPTION from=${pkgbase_from}
 
 RAW if [ "${pkgbase_full}" != 0 ]; then
-    CMD --local pkg -c "${mountpath}" install -y openssl
-    CMD --local pkg -c "${mountpath}" install -y \
-            FreeBSD-bootloader \
-            FreeBSD-caroot \
-            FreeBSD-certctl \
-            FreeBSD-clibs \
-            FreeBSD-fetch \
-            FreeBSD-geom \
-            FreeBSD-kerberos-lib \
-            FreeBSD-kernel-generic \
-            FreeBSD-libarchive \
-            FreeBSD-libbsm \
-            FreeBSD-libexecinfo \
-            FreeBSD-libucl \
-            FreeBSD-mtree \
-            FreeBSD-newsyslog \
-            FreeBSD-openssl-lib \
-            FreeBSD-pkg-bootstrap \
-            FreeBSD-rc \
-            FreeBSD-runtime \
-            FreeBSD-syslogd \
-            FreeBSD-ufs \
-            FreeBSD-utilities \
-            FreeBSD-zoneinfo \
-            FreeBSD-ssh \
-            pam_xdg
+    PKG openssl
+    PKG FreeBSD-bootloader \
+        FreeBSD-caroot \
+        FreeBSD-certctl \
+        FreeBSD-clibs \
+        FreeBSD-fetch \
+        FreeBSD-geom \
+        FreeBSD-kerberos-lib \
+        FreeBSD-kernel-generic \
+        FreeBSD-libarchive \
+        FreeBSD-libbsm \
+        FreeBSD-libexecinfo \
+        FreeBSD-libucl \
+        FreeBSD-mtree \
+        FreeBSD-newsyslog \
+        FreeBSD-openssl-lib \
+        FreeBSD-pkg-bootstrap \
+        FreeBSD-rc \
+        FreeBSD-runtime \
+        FreeBSD-syslogd \
+        FreeBSD-ufs \
+        FreeBSD-utilities \
+        FreeBSD-zoneinfo \
+        FreeBSD-ssh \
+        pam_xdg
 RAW fi
-
-CMD --local cp -a "${mountpath}/" "${APPJAIL_JAILDIR}"
-
-RAW buildah umount "${container_id}"
-RAW buildah rm "${container_id}"
