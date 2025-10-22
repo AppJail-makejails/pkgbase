@@ -23,11 +23,18 @@ appjail makejail \
 
 ## Tags
 
-| Tag                | Arch    | Version            | Type    | `pkgbase_full` | `pkgbase_from`                               |
-| ------------------ | --------| ------------------ | ------- | -------------- | -------------------------------------------- |
-| `%%TAG1%%-minimal` | `amd64` | `%%TAG1%%-RELEASE` | `thick` |      `0`       | `docker.io/freebsd/freebsd-runtime:%%TAG1%%` |
-| `%%TAG1%%-full`    | `amd64` | `%%TAG1%%-RELEASE` | `thick` |      `1`       | `docker.io/freebsd/freebsd-runtime:%%TAG1%%` |
-| `%%TAG2%%-minimal` | `amd64` | `%%TAG2%%-STABLE`  | `thick` |      `0`       | `docker.io/freebsd/freebsd-runtime:%%TAG2%%` |
-| `%%TAG2%%-full`    | `amd64` | `%%TAG2%%-STABLE`  | `thick` |      `1`       | `docker.io/freebsd/freebsd-runtime:%%TAG2%%` |
-| `%%TAG3%%-minimal` | `amd64` | `%%TAG3%%-CURRENT` | `thick` |      `0`       | `docker.io/freebsd/freebsd-runtime:%%TAG3%%` |
-| `%%TAG3%%-full`    | `amd64` | `%%TAG3%%-CURRENT` | `thick` |      `1`       | `docker.io/freebsd/freebsd-runtime:%%TAG3%%` |
+| Tag                | Arch    | Version | Type    | `pkgbase_osversion` | `pkgbase_release`      |
+| ------------------ | --------| ------- | ------- | ------------------- | ---------------------- |
+| `%%TAG1%%-minimal` | `amd64` |    -    | `thick` |     `%%TAG1%%`      | `%%TAG1%%-minimal` [1] |
+| `%%TAG1%%-full`    | `amd64` |    -    | `thick` |     `%%TAG1%%`      | `%%TAG1%%-full`    [2] |
+| `%%TAG2%%-minimal` | `amd64` |    -    | `thick` |     `%%TAG2%%`      | `%%TAG2%%-minimal` [3] |
+| `%%TAG2%%-full`    | `amd64` |    -    | `thick` |     `%%TAG2%%`      | `%%TAG2%%-full`    [4] |
+
+1. Created by `appjail fetch pkgbase -r %%TAG1%%-minimal -v %%TAG1%% FreeBSD-set-minimal-jail`
+2. Created by `appjail fetch pkgbase -r %%TAG1%%-full -v %%TAG1%% FreeBSD-set-base FreeBSD-kernel-generic`
+3. Created by `appjail fetch pkgbase -r %%TAG2%%-minimal -v %%TAG2%% FreeBSD-set-minimal-jail`
+4. Created by `appjail fetch pkgbase -r %%TAG2%%-full -v %%TAG2%% FreeBSD-set-base FreeBSD-kernel-generic`
+
+## Notes
+
+1. Early versions of this Makejail use the OCI image, but now it's just a copy of the base directory created by the `appjail-fetch(1)` `pkgbase` command.

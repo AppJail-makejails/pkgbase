@@ -1,35 +1,8 @@
-ARG pkgbase_full=0
-ARG pkgbase_from=docker.io/freebsd/freebsd-runtime:14.3
+ARG pkgbase_osversion
+ARG pkgbase_release
 
 OPTION start
 OPTION overwrite=force
-OPTION container=import args:--pull
-OPTION from=${pkgbase_from}
-
-RAW if [ "${pkgbase_full}" != 0 ]; then
-    PKG openssl
-    PKG FreeBSD-bootloader \
-        FreeBSD-caroot \
-        FreeBSD-certctl \
-        FreeBSD-clibs \
-        FreeBSD-fetch \
-        FreeBSD-geom \
-        FreeBSD-kerberos-lib \
-        FreeBSD-kernel-generic \
-        FreeBSD-libarchive \
-        FreeBSD-libbsm \
-        FreeBSD-libexecinfo \
-        FreeBSD-libucl \
-        FreeBSD-mtree \
-        FreeBSD-newsyslog \
-        FreeBSD-openssl-lib \
-        FreeBSD-pkg-bootstrap \
-        FreeBSD-rc \
-        FreeBSD-runtime \
-        FreeBSD-syslogd \
-        FreeBSD-ufs \
-        FreeBSD-utilities \
-        FreeBSD-zoneinfo \
-        FreeBSD-ssh \
-        pam_xdg
-RAW fi
+OPTION type=thick
+OPTION osversion=${pkgbase_osversion}
+OPTION release=${pkgbase_release}
