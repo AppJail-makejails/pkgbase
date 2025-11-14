@@ -23,17 +23,12 @@ appjail makejail \
 
 ## Tags
 
-| Tag                | Arch    | Version | Type    | `pkgbase_osversion` | `pkgbase_release`      |
-| ------------------ | --------| ------- | ------- | ------------------- | ---------------------- |
-| `%%TAG1%%-minimal` | `amd64` |    -    | `thick` |     `%%TAG1%%`      | `%%TAG1%%-minimal` [1] |
-| `%%TAG1%%-full`    | `amd64` |    -    | `thick` |     `%%TAG1%%`      | `%%TAG1%%-full`    [2] |
-| `%%TAG2%%-minimal` | `amd64` |    -    | `thick` |     `%%TAG2%%`      | `%%TAG2%%-minimal` [3] |
-| `%%TAG2%%-full`    | `amd64` |    -    | `thick` |     `%%TAG2%%`      | `%%TAG2%%-full`    [4] |
-
-1. Created by `appjail fetch pkgbase -r %%TAG1%%-minimal -v %%TAG1%% FreeBSD-set-minimal-jail`
-2. Created by `appjail fetch pkgbase -r %%TAG1%%-full -v %%TAG1%% FreeBSD-set-base FreeBSD-kernel-generic`
-3. Created by `appjail fetch pkgbase -r %%TAG2%%-minimal -v %%TAG2%% FreeBSD-set-minimal-jail`
-4. Created by `appjail fetch pkgbase -r %%TAG2%%-full -v %%TAG2%% FreeBSD-set-base FreeBSD-kernel-generic`
+| Tag                | Arch    | Version | Type    | `pkgbase_osversion` | `pkgbase_release`  |
+| ------------------ | --------| ------- | ------- | ------------------- | ------------------ |
+| `%%TAG1%%-minimal` | `amd64` |    -    | `thick` |     `%%TAG1%%`      | `%%TAG1%%-minimal` |
+| `%%TAG1%%-full`    | `amd64` |    -    | `thick` |     `%%TAG1%%`      | `%%TAG1%%-full`    |
+| `%%TAG2%%-minimal` | `amd64` |    -    | `thick` |     `%%TAG2%%`      | `%%TAG2%%-minimal` |
+| `%%TAG2%%-full`    | `amd64` |    -    | `thick` |     `%%TAG2%%`      | `%%TAG2%%-full`    |
 
 ## Notes
 
