@@ -26,4 +26,3 @@ tags+: 16-full
 16-full.sum.amd64: 6d97c05c862b6136a76efae99f916e9be67befc28edbe953ae0b1d70c21a8ba6
 16-full.size.amd64: 540146260
 16-full.source.amd64: "http://appjail.hpc.at/pkgbase/16-full-amd64-image.appjail"
-maintenance: "This image is uploading, please wait a moment and try again. If you are importing this image using a Makejail that has the '--<name>_ajspec' argument, you can use the 'reproduce' method to use 'appjail-reproduce'. See 'appjail-image(5)' for details."
